@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Bate-papo Node.js e Socket.IO</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Pop-up para inserir nome de usuário -->
+    <div id="userModal">
+        <div class="modal-content">
+            <h2>Digite seu nome para entrar no chat</h2>
+            <input id="modalNome" placeholder="Seu nome de usuário" autocomplete="off" />
+            <button id="entrarChat">Entrar no chat</button>
+        </div>
+    </div>
+
+    <!-- Container principal do chat -->
+    <div id="chat-container">
+        <div id="chat-header">
+            <h2>Chat</h2>
+            <button id="fecharChat">✕</button>
+        </div>
+        <div id="nome-display"></div>
+        <ul id="mensagens"></ul>
+        <form>
+            <input id="mensagem" placeholder="Digite sua mensagem aqui..." autocomplete="off" />
+            <button>Enviar</button>
+        </form>
+    </div>
+
+    <!-- Importa o script do Socket.IO -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>
